@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const navigation = {
   "About Us": [
@@ -45,12 +46,12 @@ const Footer = () => {
               <ul className="mt-2 md:mt-4 lg:mt-6 space-y-2 md:space-y-3 text-sm font-base lg:font-medium">
                 {links.map(({ name, href }) => (
                   <li key={name}>
-                    <a
+                    <Link
                       className="text-black transition hover:text-secondary text-xs lg:text-sm"
-                      href={href}
+                      to={href}
                     >
                       {name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -59,7 +60,7 @@ const Footer = () => {
         </div>
         {/* social media   */}
         <div className="mt-2 md:mt-3 lg:mt-6 justify-between flex flex-col items-center gap-4 p-6 sm:flex-row">
-          <a className="hidden md:block" href="/">
+          <Link className="hidden md:block" to="/">
             <span className="sr-only">Home</span>
             <div
               className="bg-dominant rounded w-10 h-10"
@@ -70,7 +71,7 @@ const Footer = () => {
                 loading: "lazy",
               }}
             />
-          </a>
+          </Link>
           <p className="text-black text-center  mt-2 md:mt-3  text-xs ">
             Copyright &copy; {new Date().getFullYear()}. All rights reserved.
           </p>

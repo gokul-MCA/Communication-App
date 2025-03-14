@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -6,7 +7,7 @@ const Header = () => {
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">
-          <a className="" href="/">
+          <Link className="" to="/">
             <span className="sr-only">Home</span>
             <div
               className="bg-dominant rounded w-10 h-10"
@@ -17,28 +18,28 @@ const Header = () => {
                 loading: "lazy",
               }}
             />
-          </a>
+          </Link>
           </div>
 
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 text-lg transition hover:text-teal-600"
-                    href="/"
+                    to="/"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 text-lg transition hover:text-teal-600"
-                    href="/about"
+                    to="/about"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <div className="relative">
@@ -68,20 +69,20 @@ const Header = () => {
                     <div className="z-50 group-open:absolute group-open:start-0 group-open:top-auto group-open:mt-2 group-open:shadow-xl group-open:p-4 w-60">
                       <ul className="flex flex-col justify-center items-center gap-6 text-sm">
                         <li>
-                          <a
+                          <Link
                             className="text-gray-500 text-lg transition hover:text-teal-600"
-                            href=""
+                            to="/"
                           >
                             Discover Communities
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="text-gray-500 text-lg transition hover:text-teal-600"
-                            href="#"
+                            to="/"
                           >
                             Create a Community
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -89,12 +90,12 @@ const Header = () => {
                 </div>
 
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 text-lg transition hover:text-teal-600"
-                    href="/events-listing"
+                    to="/events-listing"
                   >
                     Events
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -102,20 +103,20 @@ const Header = () => {
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
-              <a
+              <Link
                 className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm active:text-teal-600 active:bg-white"
-                href="#"
+                to="#"
               >
                 Login
-              </a>
+              </Link>
 
               <div className="hidden sm:flex">
-                <a
+                <Link
                   className="rounded-md bg-white px-5 py-2.5 text-sm font-medium text-teal-600 active:bg-teal-600 active:text-white"
-                  href="#"
+                  to="#"
                 >
                   Register
-                </a>
+                </Link>
               </div>
             </div>
 
